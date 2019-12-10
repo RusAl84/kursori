@@ -6,7 +6,19 @@
 #include "stack.h"
 
 using namespace std;
+int getElement(int nomer, stack* st, KurList* kur1){
+	if ((nomer >= 0) and (nomer < st->size()))
+	{
+		stack* temp_stack = new stack;
+		temp_stack->init(kur1);
+		int pos = 0;
+		//while (pos <= nomer)
+		{
+			//temp_stack->push(st->pop());
 
+		}
+	}
+}
 int main()
 {
 	//List* ls = new List();
@@ -40,6 +52,7 @@ int main()
 
 	int n = st1->size(); //n - количество элементов
 
+	//Пишем обертку
 
 
 
