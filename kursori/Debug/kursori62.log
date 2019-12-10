@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (kursori62.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  kursori.cpp
+d:\Users\user\source\repos\kursori62\kursori62\kursori62\KurList.h(44): warning C4715: KurList::GetData: значение возвращается не при всех путях выполнения
+d:\Users\user\source\repos\kursori62\kursori62\kursori62\KurList.h(40): warning C4715: KurList::GetNext: значение возвращается не при всех путях выполнения
+  kursori62.vcxproj -> d:\Users\user\source\repos\kursori62\kursori62\Debug\kursori.exe
