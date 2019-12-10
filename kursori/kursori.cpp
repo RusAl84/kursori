@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-	//List* ls = new List();
+	////List* ls = new List();
 	KurList* kur1 = new KurList;
 	//kur1->se
 	kur1->init(10); // выделяем 1000 ячеек памяти
