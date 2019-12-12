@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="KurList.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="obertka.h" />
     <ClInclude Include="stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -18,6 +18,7 @@ int getElement(int nomer, stack* st, KurList* kur1){
 
 		}
 	}
+	return -1;
 }
 int main()
 {
