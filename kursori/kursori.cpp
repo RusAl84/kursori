@@ -50,64 +50,32 @@ bool setElement(int nomer, int element,  stack* st, KurList* kur1) {
 	}
 	return false;
 }
-
-// A utility function to swap two elements 
-void swap(stack* st, KurList* kur1, int i, int j)
+void insertionSort(stack* st, KurList* kur1)
 {
-	int ii = getElement(i, st, kur1);
-	int jj = getElement(j, st, kur1);
-	setElement(i, jj, st, kur1);
-	setElement(j, ii, st, kur1);
-}
-
-/* This function takes last element as pivot, places
-   the pivot element at its correct position in sorted
-	array, and places all smaller (smaller than pivot)
-   to left of pivot and all greater elements to right
-   of pivot */
-int partition(stack* st, KurList* kur1, int low, int high)
-{
-	//int pivot = arr[high];    // pivot 
-	int pivot = getElement(high, st, kur1);
-	int i = (low - 1);  // Index of smaller element 
-
-	for (int j = low; j <= high - 1; j++)
+	int n = st->size();
+	int i, key, j;
+	for (i = 1; i < n; i++)
 	{
-		// If current element is smaller than or 
-		// equal to pivot 
-		//if (arr[j] <= pivot)
-		if (getElement(j, st, kur1) <= pivot)
+		//key = arr[i];
+		key = getElement(i, st, kur1);
+		j = i - 1;
+
+		/* Move elements of arr[0..i-1], that are
+		greater than key, to one position ahead
+		of their current position */
+		//while (j >= 0 && arr[j] > key)
+		while (j >= 0 && getElement(j, st, kur1) > key)
 		{
-			i++;    // increment index of smaller element 
-			swap(st, kur1, i, j);
-			//swap(&arr[i], &arr[j]); 
+			int t = getElement(j, st, kur1);
+			setElement(j+1, t, st, kur1);
+			//arr[j + 1] = arr[j];
+			j = j - 1;
 		}
+		setElement(j + 1, key, st, kur1);
+		//arr[j + 1] = key;
 	}
-	//swap(&arr[i + 1], &arr[high]);
-	swap(st, kur1, i+1, high);
-	return (i + 1);
 }
-/* The main function that implements QuickSort
- arr[] --> Array to be sorted,
-  low  --> Starting index,
-  high  --> Ending index */
-void quickSort(stack* st, KurList* kur1, int low, int high)
-{
-	if (low < high)
-	{
-		/* pi is partitioning index, arr[p] is now
-		   at right place */
-		int pi = partition(st, kur1, low, high);
-		//int pi = partition(arr, low, high);
 
-		// Separately sort elements before 
-		// partition and after partition 
-		quickSort(st, kur1, low, pi - 1);
-		quickSort(st, kur1, pi + 1, high);
-		//quickSort(arr, low, pi - 1);
-		//quickSort(arr, pi + 1, high);
-	}
-}
 int main()
 {
 	//List* ls = new List();
@@ -120,12 +88,11 @@ int main()
 
 	stack* st1 = new stack;
 	st1->init(kur1);
-	st1->push(10);
-	st1->push(7);
-	st1->push(8);
-	st1->push(9);
-	st1->push(1);
+	st1->push(12);
+	st1->push(11);
+	st1->push(13);
 	st1->push(5);
+	st1->push(6);
 	/*cout << st1->peek() << "\n";  // для отладки
 	cout << "stack!\n";
 	kur1->showmas();
@@ -140,7 +107,8 @@ int main()
 	st1->show();
 
 	int n = st1->size(); //n - количество элементов
-	quickSort(st1, kur1, 0, n - 1);
+
+	insertionSort(st1, kur1);
 	cout << "Sorted array:\n";
 	st1->show();
 	//Пишем обертку - отладка
