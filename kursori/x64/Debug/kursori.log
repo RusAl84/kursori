@@ -1,2 +1,5 @@
 ﻿  kursori.cpp
-D:\Users\user\source\repos\kursori-fvv\kursori\kursori.cpp : fatal error C1041: невозможно открыть базу данных программы D:\Users\user\source\repos\kursori-fvv\kursori\x64\Debug\vc142.idb; если несколько файлов CL.EXE осуществляют запись в один и тот же PDB-файл, воспользуйтесь /FS
+D:\Users\user\source\repos\kursori-fvv\kursori\KurList.h(57,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Users\user\source\repos\kursori-fvv\kursori\KurList.h(40): warning C4715: KurList::GetNext: значение возвращается не при всех путях выполнения
+D:\Users\user\source\repos\kursori-fvv\kursori\KurList.h(44): warning C4715: KurList::GetData: значение возвращается не при всех путях выполнения
+  kursori.vcxproj -> D:\Users\user\source\repos\kursori-fvv\x64\Debug\kursori.exe
