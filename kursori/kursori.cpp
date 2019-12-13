@@ -88,11 +88,27 @@ int main()
 
 	stack* st1 = new stack;
 	st1->init(kur1);
-	st1->push(12);
+	bool prodolzhat=true;
+	while (prodolzhat)
+	{
+		cout << "Vvedite elemnet massiva:\n";
+		int element;
+		cin >> element;
+		st1->push(element);
+		cout << "Prodolzhit vvod massiva (y/n):\n";
+		char ch;
+		cin >> ch;
+		if (ch == 'n')
+			prodolzhat = false;
+	}
+
+
+
+	/*st1->push(12);
 	st1->push(11);
 	st1->push(13);
 	st1->push(5);
-	st1->push(6);
+	st1->push(6);*/
 	/*cout << st1->peek() << "\n";  // для отладки
 	cout << "stack!\n";
 	kur1->showmas();
