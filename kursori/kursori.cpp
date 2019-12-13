@@ -141,7 +141,7 @@ int main()
 
 	int n = st1->size(); //n - количество элементов
 	quickSort(st1, kur1, 0, n - 1);
-	printf("Sorted array: n");
+	cout << "Sorted array:\n";
 	st1->show();
 	//Пишем обертку - отладка
 	//int elem = getElement(5, st1, kur1);
