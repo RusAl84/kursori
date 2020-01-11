@@ -152,11 +152,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="kursori.cpp" />
+    <ClCompile Include="andr.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="KurList.h" />
-    <ClInclude Include="List.h" />
     <ClInclude Include="obertka.h" />
     <ClInclude Include="stack.h" />
   </ItemGroup>
